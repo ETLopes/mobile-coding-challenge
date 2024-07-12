@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { View, Text } from 'react-native'
 import CartContext from '../context/cartContext'
 import { cartWithQuantity } from '../utils/index'
-import { CartItem, Total } from '../components'
+import { CartItem, EmptyCart, Total } from '../components'
 import { styles } from '../styles/shoppingCart'
 import { useNavigation } from '@react-navigation/native'
 
@@ -23,17 +23,7 @@ const ShoppingCart = () => {
   return (
     <View style={styles.shoppingCartContainer}>
       {cartItems.length === 0 ? (
-        <>
-          <Text style={styles.emptyCartTitle}>Your cart {'\n'} is empty :(</Text>
-          <Text
-            onPress={() => {
-              navigation.navigate('Menu')
-            }}
-            style={styles.emptyCartSubtitle}
-          >
-            Click here to add items to your cart
-          </Text>
-        </>
+        <EmptyCart navigation={navigation} />
       ) : (
         <>
           <View style={styles.cartItemsHeader}>
@@ -49,15 +39,7 @@ const ShoppingCart = () => {
               />
             ))}
           </View>
-          <View
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              width: '100%',
-            }}
-          >
-            <Total cart={cart} />
-          </View>
+          <Total cart={cart} />
         </>
       )}
     </View>

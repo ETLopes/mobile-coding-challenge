@@ -90,4 +90,9 @@ export const styles = StyleSheet.create({
     color: '#007BFF',
     textDecorationLine: 'underline',
   },
+  totalBody: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+  },
 })
