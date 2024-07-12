@@ -69,6 +69,7 @@ export default function App() {
                 headerStyle: {
                   backgroundColor: 'white',
                 },
+                headerTitle: 'Shopping Cart',
               }}
             />
           </Stack.Navigator>
