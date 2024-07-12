@@ -24,6 +24,8 @@ export const styles = StyleSheet.create({
   menuItemText: {
     fontSize: 28,
     marginVertical: 10,
+    flexWrap: 'wrap',
+    maxWidth: '70%',
   },
   menuItemPrice: {
     fontSize: 28,
