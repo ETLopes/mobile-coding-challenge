@@ -83,14 +83,17 @@ I've used the Context API to manage the state of the shopping cart. This way, I 
 First thing would be adding unit tests to the project. This would help in ensuring that the code works as expected and would make it easier to refactor the code in the future.
 The only reason why I didn't add tests is because of the scope.
 
+The way I've structured the screens and components makes it easier to test them. Components would only depend on props and the screens would only depend on the logic, context and etc.
+
 ### Typescript 🛠️
 
 I would add Typescript to the project. This would help in catching errors at compile time and make the code more robust.
+The separation of concerns of the screens and components also make them easier to migrate to typescript, because we can guarantee that the components would receive exactly what they need and the screens would only pass the correct prop types.
 
 ### Styling 🎨
 
-I don't have a strong opinion on this topic, but this could go either with a tailwind css approach but it could also go with a plain css approach, creating Components and Screen Templates with it.
+I don't have a strong opinion on this topic, but this could go either with a tailwind css approach but it could also go with a plain css approach, creating Components and Screen templates with it.
 
 ### Additional notes
 
-There are also a lot of topics related to CI/CD, pre-push checks, other kinds of tests(E2E, visual regression, etc), code-coverage, etc. that could be added to the project.
+There are also a lot of topics related to CI/CD, pre-push checks, other kinds of tests(E2E, visual regression, etc), code-coverage, etc, that could be added to the project.
